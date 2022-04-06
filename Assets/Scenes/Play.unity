@@ -856,7 +856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &748641243
 AudioSource:
   m_ObjectHideFlags: 0
@@ -867,10 +867,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f72fdff31ff0e4b68876ced0406b2fa8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 473e1c76adaa5b84ebab72117cfcf1f3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.29
+  m_Pitch: 0.68
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -981,7 +981,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2035,7 +2035,7 @@ PrefabInstance:
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LandSound
       value: 
-      objectReference: {fileID: 8300000, guid: 9135e9ad51e772e488cccad8ba363829, type: 3}
+      objectReference: {fileID: 8300000, guid: e7f445498270c0848b90f54e44395a97, type: 3}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_WalkSpeed
       value: 3
@@ -2060,6 +2060,14 @@ PrefabInstance:
       propertyPath: m_FovKick.FOVIncrease
       value: 15.01
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_FootstepSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: eae45bfdb1b80bd43aeb0e894b20e48d, type: 3}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_FootstepSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: cca409c5a73b2aa47a0b28223491eb0e, type: 3}
     - target: {fileID: 12474086, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Enabled
       value: 1
