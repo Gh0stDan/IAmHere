@@ -55,6 +55,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3530731322860662978
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 478776525477544657}
   - component: {fileID: 1325025325258784661}
+  - component: {fileID: 5570414283620068847}
   m_Layer: 0
   m_Name: lucerna
   m_TagString: Untagged
@@ -123,11 +126,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3530731322860662978}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4748962, y: 0.18480492, z: 0.52726567}
-  m_Center: {x: 0.005924821, y: 0.08681536, z: -0.008675754}
+  m_Size: {x: 2.3892078, y: 4.1483827, z: 2.5432293}
+  m_Center: {x: -0.9512266, y: -0.08075833, z: -0.0049259597}
+--- !u!114 &5570414283620068847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3530731322860662978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711a89d589f508646866357256518332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: d406b63a6b0003842a0a9f3b5e5ce723, type: 2}
 --- !u!1 &3840823955854313656
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,6 +234,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &8249620494900424485
@@ -275,6 +292,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -299,3 +317,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
