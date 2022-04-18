@@ -11,7 +11,7 @@ public class DoorMechanics : MonoBehaviour
 
     [Header("Important Variables")]
     public Animator anim;
-    public AnimatorOverrideController animOverrideController;
+    //public AnimatorOverrideController animOverrideController;
     public MessageToPlayer messageToPlayer_class;
 
     private void Start()
@@ -24,13 +24,20 @@ public class DoorMechanics : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             //Show message when Player is reach to door
-            if (isDoorOpen)
+            if (isDoorLock)
             {
-                messageToPlayer_class.OpenMessageDoorToUser("Close Door", isDoorLock);
+                messageToPlayer_class.OpenMessageDoorToUser("Door Locked", isDoorLock);
             }
             else
             {
-                messageToPlayer_class.OpenMessageDoorToUser("Open Door", isDoorLock);
+                if (isDoorOpen)
+                {
+                    messageToPlayer_class.OpenMessageDoorToUser("Close Door", isDoorLock);
+                }
+                else
+                {
+                    messageToPlayer_class.OpenMessageDoorToUser("Open Door", isDoorLock);
+                }
             }
 
             //Do action depend if door is locked or not
@@ -42,21 +49,25 @@ public class DoorMechanics : MonoBehaviour
                 {                  
                     if (isDoorOpen)
                     {
-                        //Close anim and sound
-                        Debug.Log("Door closed");
                         isDoorOpen = false;
+
+                        //Close anim and sound
+                        anim.SetBool("isOpen", isDoorOpen);
+                        //Debug.Log("Door closed");                       
                     }
                     else
-                    {
-                        //Open anim and sound
-                        Debug.Log("Door Opened");
+                    {                       
                         isDoorOpen = true;
+
+                        //Open anim and sound
+                        anim.SetBool("isOpen", isDoorOpen);
+                        //Debug.Log("Door Opened");                       
                     }                   
                 }
                 else
                 {
                     //Sound door Locked
-                    Debug.Log("Door locked");
+                    //Debug.Log("Door locked");
                 }
             }
             else if (activateOneTime == true && Input.GetKeyUp(KeyCode.E))
@@ -73,5 +84,13 @@ public class DoorMechanics : MonoBehaviour
             messageToPlayer_class.CloseMessageDoorToUser();
             activateOneTime = false;
         }
+    }
+
+    //Lines to check pos
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine( (transform.position + new Vector3(2.0f, 0.0f, 0.0f)), (transform.position + new Vector3(-2.0f, 0.0f, 0.0f)) );
+        Gizmos.DrawLine( (transform.position + new Vector3(0.0f, 0.0f, 2.0f)), (transform.position + new Vector3(0.0f, 0.0f, -2.0f)) );
     }
 }

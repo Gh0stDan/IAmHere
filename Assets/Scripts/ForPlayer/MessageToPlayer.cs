@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MessageToPlayer : MonoBehaviour
 {
-    public GameObject MessagePanel_GO;
+    public GameObject MessagePanel_GO; 
     public GameObject ShowLock_GO;
     public TextMeshProUGUI Message_TMP;
     public RawImage MessageImage_RawImage;
@@ -19,7 +19,7 @@ public class MessageToPlayer : MonoBehaviour
         MessagePanel_GO.SetActive(true);
     }
 
-    public void CloseMessageDoorToUser()
+    public void CloseMessageDoorToUser() 
     {
         MessagePanel_GO.SetActive(false);
     }
