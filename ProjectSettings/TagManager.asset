@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Administrador
+  - PortalCamera
   layers:
   - Default
   - TransparentFX
@@ -12,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Monster
   - 
   - 
   - 
@@ -39,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Monster
+    uniqueID: 2039261605
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
