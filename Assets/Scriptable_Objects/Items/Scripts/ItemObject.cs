@@ -5,7 +5,8 @@ using UnityEngine;
 public enum ItemType
 {
     Food,
-    Equipment
+    Equipment,
+    Interactable
 }
 public class ItemObject : ScriptableObject
 {

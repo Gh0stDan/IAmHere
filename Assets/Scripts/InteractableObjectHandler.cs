@@ -4,6 +4,41 @@ using UnityEngine;
 
 public class InteractableObjectHandler : MonoBehaviour
 {
+    public InventoryObject inventory;
+
+    private void FixedUpdate()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Raycast is casted");
+            RaycastHit hit;
+
+            if (Physics.Raycast(transform.position,
+                                transform.TransformDirection(Vector3.forward),
+                                out hit,
+                                Mathf.Infinity))
+            {
+                if (hit.transform.GetComponent<ObjectToInteract>() != null)
+                {
+                    CheckIfInteractable(hit.transform.GetComponent<ObjectToInteract>());
+                }
+            }
+        }
+    }
+
+    public void CheckIfInteractable(ObjectToInteract itemObject)
+    {
+        Debug.Log("Hit is interactable");
+
+        foreach (InventorySlot slot in inventory.Container)
+        {
+            if (slot.item == itemObject.interactsWith)
+            {
+                Destroy(itemObject.gameObject);
+            }
+        }
+    }
+    /*
     public List<InteractableObject> interactablesInventory;
     public GameObject knife;
 
@@ -33,22 +68,10 @@ public class InteractableObjectHandler : MonoBehaviour
         }
     }
 
-    public void CheckIfInteractable(GameObject objectToCheck)
-    {
-        InteractableObject objectToCheckInteractable = objectToCheck.GetComponent<InteractableObject>();
-
-        foreach (var interactable in interactablesInventory)
-        {
-            if (objectToCheckInteractable.interactableID == interactable.interactableID)
-            {
-                Debug.Log("Object can be destroyed");
-                Destroy(objectToCheck);
-            }
-        }
-    }
+    
 
     private void OnMouseOver()
     {
         Debug.Log("Player is looking at " + transform.name);
-    }
+    }*/
 }

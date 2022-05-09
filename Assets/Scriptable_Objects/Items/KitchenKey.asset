@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2167bd205520df428cde3a649237c15, type: 3}
+  m_Name: KitchenKey
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1594778146230798541, guid: 3fb24eb9692536b4e8e8dbac05f7b543, type: 3}
+  type: 1
+  description: Opens locked door on kitchen
+  interactionID: 1
